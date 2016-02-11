@@ -1,3 +1,4 @@
+<?php
 function proteger( $str ){
 if( !is_array( $str ) ) {
   $str = preg_replace("/(from|select|insert|delete|where|drop table|show tables)/i","",$str);
@@ -19,3 +20,4 @@ if( !is_array( $str ) ) {
 
 //Exemplo de utilização
 $name = @proteger($_GET["name"]);
+?>
